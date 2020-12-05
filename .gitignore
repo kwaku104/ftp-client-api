@@ -1,0 +1,6 @@
+.DS_Store
+__pycache__/
+*.pyc
+.supersecret
+aws-transfer-custom-idp-basic-apig.template.yml
+venv/
