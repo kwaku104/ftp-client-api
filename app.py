@@ -91,7 +91,7 @@ def create_tables():
 
 
 api.add_resource(FTPConnect, '/ftpconnect')
-api.add_resource(FTPResource, '/ftp/<string:file_name>')
+api.add_resource(FTPResource, '/ftp/<string:file_path>')
 api.add_resource(UserRegister, '/register')
 api.add_resource(UserLogin, '/login')
 api.add_resource(User, '/user/<int:user_id>')
