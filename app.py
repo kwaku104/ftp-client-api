@@ -5,7 +5,7 @@ from flask_jwt_extended import JWTManager
 from db import db
 from blacklist import BLACKLIST
 from resources.user import UserRegister, UserLogin, User, TokenRefresh, UserLogout
-from resources.clientAPI import FTPConnect, FTPResource
+from resources.clientAPI import SFTPConnect, SFTPResource
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
@@ -90,8 +90,8 @@ def create_tables():
     db.create_all()
 
 
-api.add_resource(FTPConnect, '/ftpconnect')
-api.add_resource(FTPResource, '/ftp/<string:file_path>')
+api.add_resource(SFTPConnect, '/sftpconnect')
+api.add_resource(SFTPResource, '/sftp/<string:file_path>')
 api.add_resource(UserRegister, '/register')
 api.add_resource(UserLogin, '/login')
 api.add_resource(User, '/user/<int:user_id>')
